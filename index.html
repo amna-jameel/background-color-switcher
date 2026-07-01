@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+    <!-- Color Changer — Button click par background color random change ho. -->
+     <h1 class="font-semibold text-2xl text-blue-900 md:mt-62 mt-30 text-center">Background Changer</h1>
+     <!-- parent div  -->
+      <div class="m-auto md:h-14 md:w-[400px] h-8 w-[300px]  border border-black border-1 bg-white rounded-2xl shadow-lg shadow-black mt-2 flex md:flex-row rounded-full   gap-2 justify-center align-center md:pt-2 pt-[2px] px-2">
+        <!-- color dot  -->
+         <div id="red-btn" class="md:h-8 md:w-8 h-6 w-6 rounded-full bg-red-600 border border-1 border-gray-400"></div>
+         <div id="green-btn" class="md:h-8 md:w-8 h-6 w-6 rounded-full bg-green-400  border border-1 border-gray-400"></div>
+         <div id="yellow-btn" class="md:h-8 md:w-8 h-6 w-6  rounded-full bg-yellow-300  border border-1 border-gray-400"></div>
+         <div id="orange-btn" class="md:h-8 md:w-8 h-6 w-6 rounded-full bg-orange-500  border border-1 border-gray-400"></div>
+         <div id="brown-btn" class="md:h-8 md:w-8 h-6 w-6 rounded-full bg-red-900  border border-1 border-gray-400"></div>
+         <div id="blue-btn" class="md:h-8 md:w-8 h-6 w-6  rounded-full bg-blue-500  border border-1 border-gray-400"></div>
+          <div id="purple-btn" class="md:h-8 md:w-8 h-6 w-6  rounded-full bg-purple-500  border border-1 border-gray-400"></div>
+           <div id="gray-btn" class="md:h-8 md:w-8 h-6 w-6  rounded-full bg-gray-500  border border-1 border-gray-400"></div>
+            <div id="light-orange" class="md:h-8 md:w-8 h-6 w-6  rounded-full bg-orange-300  border border-1 border-gray-400"></div>
+            <div id="reset" class="md:h-8 md:w-8 h-6 w-6  rounded-full bg-white  border border-1 border-gray-400"></div>
+      </div>
+      <script>
+       const redBtn = document.querySelector("#red-btn");
+       const greenBtn = document.querySelector("#green-btn");
+       const yellowBtn = document.querySelector("#yellow-btn");
+       const orangeBtn = document.querySelector("#orange-btn");
+       const brownBtn = document.querySelector("#brown-btn");
+       const blueBtn = document.querySelector("#blue-btn");
+       const purpleBtn = document.querySelector("#purple-btn");
+       const grayBtn = document.querySelector("#gray-btn");
+       const lightorange = document.querySelector("#light-orange");
+         const reset = document.querySelector("#reset");
+      let colorChanger = (btn, color) => {
+    btn.addEventListener("click", () => {
+       document.body.className = color;
+    });
+};
+colorChanger(redBtn ,"bg-red-600");
+colorChanger(greenBtn ,"bg-green-400");
+colorChanger(yellowBtn ,"bg-yellow-300");
+colorChanger(orangeBtn ,"bg-orange-500");
+colorChanger(brownBtn ,"bg-red-900");
+colorChanger(blueBtn ,"bg-blue-500");
+colorChanger(purpleBtn ,"bg-purple-500");
+colorChanger(grayBtn ,"bg-gray-500");
+colorChanger(lightorange ,"bg-orange-300");
+colorChanger(reset ,"bg-white");
+
+
+      </script>
+</body>
+</html>
